@@ -1,0 +1,3 @@
+{
+	"extends": "./vendor/wporg/wporg-repo-tools/configs/stylelint.js"
+}

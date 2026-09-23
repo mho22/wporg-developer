@@ -1,0 +1,36 @@
+{
+	"generated": "2026-09-23T09:18:39.899Z",
+	"totals": {
+		"ran-match": 2,
+		"ran-ok": 0,
+		"ran-mismatch": 0,
+		"ran-error": 0,
+		"no-output": 0,
+		"not-runnable": 0,
+		"never-completed": 0
+	},
+	"results": [
+		{
+			"page": "wp_html_processor-class_list",
+			"type": "wp-parser-method",
+			"url": "http://localhost:8888/reference/classes/wp_html_processor/class_list/",
+			"index": 0,
+			"bucket": "ran-match",
+			"status": "completed",
+			"input": "$p = WP_HTML_Processor::create_fragment( \"<div class='free &lt;egg&gt;\\tlang-en'>\" );\n$p->next_tag();\nforeach ( $p->class_list() as $class_name ) {\n  var_dump( $class_name );\n}",
+			"output": "string(4) \"free\"\nstring(5) \"<egg>\"\nstring(7) \"lang-en\"",
+			"expected": "string(4) \"free\"\nstring(5) \"<egg>\"\nstring(7) \"lang-en\""
+		},
+		{
+			"page": "wp_html_tag_processor-class_list",
+			"type": "wp-parser-method",
+			"url": "http://localhost:8888/reference/classes/wp_html_tag_processor/class_list/",
+			"index": 0,
+			"bucket": "ran-match",
+			"status": "completed",
+			"input": "$p = new WP_HTML_Tag_Processor( \"<div class='free &lt;egg&gt;\\tlang-en'>\" );\n$p->next_tag();\nforeach ( $p->class_list() as $class_name ) {\n  var_dump( $class_name );\n}",
+			"output": "string(4) \"free\"\nstring(5) \"<egg>\"\nstring(7) \"lang-en\"",
+			"expected": "string(4) \"free\"\nstring(5) \"<egg>\"\nstring(7) \"lang-en\""
+		}
+	]
+}
